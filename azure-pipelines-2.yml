@@ -21,19 +21,12 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - task: Docker@2
-      displayName: Build an image
       inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
-        tags: |
-          $(tag)
-- task: Docker@2
-  inputs:
-    containerRegistry: 'ssdocker'
-    command: 'login'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'ssdocker'
-    repository: 'suba99ee / ssdocrepo01'
-    command: 'buildAndPush'
-    Dockerfile: '**/AzureDockerfile'
+        containerRegistry: 'ssdocker'
+        command: 'login'
+    - task: Docker@2
+      inputs:
+        containerRegistry: 'ssdocker'
+        repository: 'suba99ee / ssdocrepo01'
+        command: 'buildAndPush'
+        Dockerfile: '**/AzureDockerfile'
