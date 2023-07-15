@@ -28,3 +28,5 @@ steps:
   inputs:
     containerRegistry: 'ssdocker'
     command: 'start'
+    arguments: 'docker run -p 8080:75  suba99ee/ssdocrepo01:22'
+    container: 'gracious_darwin'
