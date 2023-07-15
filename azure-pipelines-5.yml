@@ -23,10 +23,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'ssdocker'
-    command: 'login'
-- task: Docker@2
-  inputs:
-    containerRegistry: 'ssdocker'
     command: 'start'
-    arguments: 'docker run 8080:75  suba99ee/ssdocrepo01:22'
+    arguments: 'docker run suba99ee/ssdocrepo01:22'
     container: 'gracious_darwin'
