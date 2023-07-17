@@ -23,9 +23,11 @@ steps:
 - task: CopyFiles@2
   inputs:
     Contents: '**/*.war'
-    TargetFolder: '
+    TargetFolder: '$(build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'copy ,war to azure'
-    publishLocation: 'Container''
+    ArtifactName: 'copy .war file from ''a'' directory to azure devops'
+    publishLocation: 'Container'
+
+
