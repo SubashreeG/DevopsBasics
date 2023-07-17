@@ -29,4 +29,4 @@ steps:
     containerRegistry: 'ssdocker'
     repository: 'suba99ee / ssdocrepo01'
     command: 'buildAndPush'
-    Dockerfile: '**/Docfile'
+    Dockerfile: '**/Docerfile'
