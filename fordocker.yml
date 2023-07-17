@@ -28,5 +28,6 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'ssdocker'
+    repository: 'suba99ee / ssdocrepo01'
     command: 'buildAndPush'
     Dockerfile: '**/Docfile'
